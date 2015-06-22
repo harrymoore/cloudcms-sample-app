@@ -1,14 +1,14 @@
 hello world
 
 {@search sort="title" skip="0" limit="10" type="n:node"}
-   {@params category="month"}
+
       <table>
       {#rows}
          <tr>
-\           <td>{_doc}</td>
+            <td>{_doc}</td>
             <td>{title}</td>
          </tr>
       {/rows}
       </table>
-   {/params}
+
 {/search}
