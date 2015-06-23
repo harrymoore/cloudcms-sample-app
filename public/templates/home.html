@@ -1,14 +1,26 @@
 hello world
 
-{@search sort="title" skip="0" limit="10" type="n:node"}
-
-      <table>
-      {#rows}
-         <tr>
+{@query type="store:book"}
+    <table>
+    {#rows}
+        <tr>
             <td>{_doc}</td>
             <td>{title}</td>
-         </tr>
-      {/rows}
-      </table>
+        </tr>
+    {/rows}
+    </table>
+{/query}
 
-{/search}
+
+{@content id="da2b9e754b2d3eeac731"}
+   <div>
+      <span></span>
+   </div>
+{/content}
+
+
+{@content path="xCategories/Classics/Books/Romeo_and_Juliet"}
+   <div>
+      <span></span>
+   </div>
+{/content}
