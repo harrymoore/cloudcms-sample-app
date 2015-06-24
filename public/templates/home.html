@@ -1,5 +1,6 @@
-hello world
+hello world<br /><br />
 
+@query by type<br />
 {@query type="store:book"}
     <table>
     {#rows}
@@ -14,13 +15,38 @@ hello world
 
 {@content id="da2b9e754b2d3eeac731"}
     <p>
-        {content._doc}<br />
+        @content by id: {content.title} {content._doc}<br />
     </p>
 {/content}
 
 
 {@content path="/Categories/Classics/Books/Romeo_and_Juliet"}
     <p>
-        {content._doc}<br />
+        @content by path: {content.title} {content._doc}<br />
     </p>
 {/content}
+
+@query by geo location<br />
+{@query skip="0" limit="5" type="store:book" near="-92.0,32.3"}
+    <table class="table">
+    {#rows}
+        <tr>
+            <td>{title}</td>
+            <td>{_doc}</td>
+        </tr>
+    {/rows}
+    </table>
+{/query}
+
+<br />
+@query by geo location<br />
+{@query skip="0" limit="5" type="store:book" near="-43.0,50.0"}
+    <table class="table">
+    {#rows}
+        <tr>
+            <td>{title}</td>
+            <td>{_doc}</td>
+        </tr>
+    {/rows}
+    </table>
+{/query}
